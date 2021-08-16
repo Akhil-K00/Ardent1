@@ -1,4 +1,6 @@
+import 'package:ardentapp/models/types.dart';
 import 'package:ardentapp/widgets/drawer.dart';
+import 'package:ardentapp/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -6,9 +8,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final int days = 3;
-    final String name = "MASDQWEWQ";
-
+    final dummyList = List.generate(10, (index) => ItemModel.items[0]);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -16,10 +16,14 @@ class HomePage extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Center(
-          child: Container(
-        child: Text("WELCOME to $days $name"),
-      )),
+      body: ListView.builder(
+          padding: const EdgeInsets.all(16.0),
+          itemCount: dummyList.length,
+          itemBuilder: (context, index) {
+            return ItemWidget(
+              item: dummyList[index],
+            );
+          }),
       drawer: MyDrawer(),
     );
   }

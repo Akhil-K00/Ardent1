@@ -1,3 +1,4 @@
+import 'package:ardentapp/pages/football.dart';
 import 'package:ardentapp/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:ardentapp/utils/routes.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => HomePage(),
         MyRoutes.homeRoute: (context) => HomePage(),
-        MyRoutes.loginRoute: (context) => LoginPage()
+        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.footballroute: (context) => FootballPage()
       },
     );
   }

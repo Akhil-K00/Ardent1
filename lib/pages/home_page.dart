@@ -1,3 +1,4 @@
+import 'package:ardentapp/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,13 +11,16 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Catalog App"),
+        title: Text(
+          "ARDENT",
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: Center(
           child: Container(
         child: Text("WELCOME to $days $name"),
       )),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }

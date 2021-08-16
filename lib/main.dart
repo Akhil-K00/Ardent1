@@ -1,6 +1,6 @@
+import 'package:ardentapp/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:ardentapp/utils/routes.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'pages/home_page.dart';
 
@@ -17,14 +17,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       //  home: HomePage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
-      ),
-      darkTheme:
-          ThemeData(brightness: Brightness.dark, primarySwatch: Colors.red),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.lightTheme(context),
+      debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => LoginPage(),
+        "/": (context) => HomePage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage()
       },

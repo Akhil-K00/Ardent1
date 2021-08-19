@@ -1,0 +1,22 @@
+{
+    "catalog_items": [
+        {
+            "id": 1,
+            "name": "Football",
+            "color": "#33605a",
+            "image": "https://i.pinimg.com/564x/8d/fa/5e/8dfa5e49398795321326f9a086d06250.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Basketball",
+            "color": "#33605a",
+            "image": "https://i.pinimg.com/564x/93/39/af/9339afb78895834b5d5cb5dcef1a4cd9.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Badminton",
+            "color": "#33605a",
+            "image": "https://i.pinimg.com/564x/63/ae/cf/63aecf42d0225160b23efd9f5b0ec4f8.jpg"
+        }
+    ]
+}
